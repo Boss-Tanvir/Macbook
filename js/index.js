@@ -126,7 +126,7 @@ promo_btn.addEventListener('click', function () {
     if (promo_code == input_promo_code.value) {
         console.log("promo code is valid")
     
-        console.log(tot - 20);
+        total.innerText = tot - 20
         
     //    console.log(final_price)
     }

@@ -103,12 +103,12 @@ function updateTotal() {
     const storagePrice1 = document.querySelector('.storage_cost').innerText
     const deliveryPrice = document.querySelector('.delivery_cost').innerText
     console.log(memoryPrice, storagePrice1, deliveryPrice);
-  
+    let defaultPrice = 1299
 
     let total_price = document.querySelector('.total_price')
     // let totalNewPrice = parseInt(total_price.innerText)
     // console.log(totalNewPrice, price)
-    total_price.innerText = parseInt(memoryPrice) + parseInt(storagePrice1) + parseInt(deliveryPrice)
+    total_price.innerText = defaultPrice + parseInt(memoryPrice) + parseInt(storagePrice1) + parseInt(deliveryPrice)
     // console.log(total_price);
     // alert("ddd")
  

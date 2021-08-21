@@ -2,14 +2,14 @@ let default_price_memory = document.querySelector('.default_price_memory')
 console.log(default_price_memory);
 
 default_price_memory.addEventListener('click', function () {
-    document.querySelector('.default_cost_memory').innerText = 0.00
+    document.querySelector('.default_cost_memory').innerText = 0
     updateTotal()
 })
 let default_price_storage = document.querySelector('.default_price_storage')
 console.log(default_price_memory);
 
 default_price_storage.addEventListener('click', function () {
-    document.querySelector('.default_cost_storage').innerText = 0.00
+    document.querySelector('.default_cost_storage').innerText = 0
     updateTotal()
 })
 let default_price_delivery = document.querySelector('.default_price_delivery')
@@ -106,14 +106,34 @@ function updateTotal() {
     let defaultPrice = 1299
 
     let total_price = document.querySelector('.total_price')
+    let total = document.querySelector('.total')
     // let totalNewPrice = parseInt(total_price.innerText)
     // console.log(totalNewPrice, price)
     total_price.innerText = defaultPrice + parseInt(memoryPrice) + parseInt(storagePrice1) + parseInt(deliveryPrice)
+   let tot = total.innerText = defaultPrice + parseInt(memoryPrice) + parseInt(storagePrice1) + parseInt(deliveryPrice)
     // console.log(total_price);
     // alert("ddd")
+
+    const input_promo_code = document.querySelector(".input_promo_code")
+console.log(input_promo_code);
+const promo_btn = document.querySelector(".promo_btn")
+// console.log(total_price);
+
+promo_btn.addEventListener('click', function () {
+    console.log(tot);
+    let promo_code = "k"
+    console.log(input_promo_code.value);
+    if (promo_code == input_promo_code.value) {
+        console.log("promo code is valid")
+    
+        console.log(tot - 20);
+        
+    //    console.log(final_price)
+    }
+})
  
 }
-// console.log(total_price);
+
 
 
 // console.log(newPrice);
